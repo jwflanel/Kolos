@@ -1,5 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ConsoleApplication1;
 
 namespace UnitTestProject1
 {
@@ -9,6 +14,7 @@ namespace UnitTestProject1
         [TestMethod]
         public void TestMethod1()
         {
+            Assert.Fail();
         }
     }
 }
