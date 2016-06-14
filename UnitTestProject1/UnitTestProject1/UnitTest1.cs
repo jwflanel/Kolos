@@ -12,9 +12,17 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void IsNotNullTest()
         {
-            Assert.Fail();
+            int[] array = { 0, 1, 0, 1, 1 };
+            Assert.IsNotNull(array);
+        }
+
+        [TestMethod]
+        public void AreEqualTest()
+        {
+            int[] array = { 0, 1, 0, 1, 1 };
+            Assert.AreEqual(array[0], 0);
         }
     }
 }
