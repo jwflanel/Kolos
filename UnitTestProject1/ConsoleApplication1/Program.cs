@@ -34,13 +34,13 @@ namespace ConsoleApplication1
                 Console.Write(carArray[i] + ", ");
 
             }
-            Console.WriteLine(carPassed);
+            Console.WriteLine();
+            Console.WriteLine("Car passed: " + carPassed);
             return carPassed;
         }
 
         public static void Main(string[] args)
         {
-            Console.WriteLine();
             PassingCars();
 
             Console.ReadKey();
