@@ -8,34 +8,41 @@ namespace ConsoleApplication1
 {
     public class Program
     {
-
-
-        public static void Main(string[] args)
+        /// <summary>
+        /// Method counts passing cars by comparing elements of array
+        /// </summary>
+        public static int PassingCars()
         {
-            int[] array = { 0, 1, 0, 1, 1 };
-            int passed = 0;
-            
-            for (int i = 0; i < array.Length; i++)
+            int[] carArray = { 0, 1, 0, 1, 1 };
+            int carPassed = 0;
+
+            for (int i = 0; i < carArray.Length; i++)
             {
-                if (array[i] == 0)
+                if (carArray[i] == 0)
                 {
-                    for (int j = 0; j < array.Length; j++)
+                    for (int j = 0; j < carArray.Length; j++)
                     {
-                        if(array[j] == 1)
+                        if (carArray[j] == 1)
                         {
                             if (i < j)
                             {
-                                passed++;
+                                carPassed++;
                             }
                         }
                     }
                 }
+                Console.Write(carArray[i] + ", ");
 
-                Console.Write(array[i] + ", ");
             }
-            Console.WriteLine();
+            Console.WriteLine(carPassed);
+            return carPassed;
+        }
 
-            Console.WriteLine(passed);
+        public static void Main(string[] args)
+        {
+            Console.WriteLine();
+            PassingCars();
+
             Console.ReadKey();
         }
     }
